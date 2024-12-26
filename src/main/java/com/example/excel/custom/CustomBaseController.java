@@ -1,11 +1,10 @@
 package com.example.excel.custom;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class CustomBaseController<S extends CustomBaseService<T>, T> {
-    private final S service;
+    @Autowired
+    protected  S service;
 
-    public CustomBaseController(S service) {
-        this.service = service;
-    }
 }
