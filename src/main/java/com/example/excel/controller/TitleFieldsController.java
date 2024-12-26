@@ -19,9 +19,7 @@ import org.springframework.web.bind.annotation.*;
 public class TitleFieldsController extends CustomBaseController<TitleFieldsService, TitleFields> {
     private final String PATH = WebConstant.API_PATH + "/TitleField";
 
-    public TitleFieldsController(TitleFieldsService service) {
-        super(service);
-    }
+
 
     @SneakyThrows
     @Operation(summary = "分页")

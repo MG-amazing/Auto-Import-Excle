@@ -2,11 +2,8 @@ package com.example.excel.controller;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.ObjectUtil;
-import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-
 import com.example.excel.common.Result;
 import com.example.excel.common.WebConstant;
 import com.example.excel.dto.ExcelBasicImportVo;
@@ -17,18 +14,20 @@ import com.example.excel.entity.TitleIdentify;
 import com.example.excel.service.FileImportLogService;
 import com.example.excel.service.TitleCorrespondenceService;
 import com.example.excel.service.TitleIdentifyService;
-import com.example.excel.service.impl.FileImportLogServiceImpl;
-import com.example.excel.util.*;
-import io.swagger.v3.oas.annotations.Operation;
+import com.example.excel.util.ExcelImportUtils;
+import com.example.excel.util.FileImportLogServiceUtil;
+import com.example.excel.util.FileMd5Utils;
+import com.example.excel.util.GetBeanUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
