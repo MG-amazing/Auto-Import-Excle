@@ -8,28 +8,55 @@
     <name>Auto-import-Excel</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>3.0.2</spring-boot.version>
     </properties>
     <dependencies>
 
+        <!-- Spring Context: 包含核心的 Spring 容器及依赖注入功能 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.23</version> <!-- 请根据需要调整版本 -->
         </dependency>
 
+        <!-- Spring Web: 提供 Web 开发支持，包括 DispatcherServlet 和 Spring MVC -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.23</version> <!-- 请根据需要调整版本 -->
+        </dependency>
+
+        <!-- Spring Web MVC: Spring MVC 核心功能 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.3.23</version> <!-- 请根据需要调整版本 -->
+        </dependency>
+
+        <!-- Spring JDBC: 提供对 JDBC 的支持 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.23</version> <!-- 请根据需要调整版本 -->
+        </dependency>
+
+        <!-- 用于单元测试的 Spring 测试支持 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.23</version> <!-- 请根据需要调整版本 -->
             <scope>test</scope>
         </dependency>
 
+        <!-- Servlet API: 用于 Web 应用的支持（仅用于 Servlet 容器） -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <scope>compile</scope>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version> <!-- 请根据需要调整版本 -->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,7 +66,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.2</version>
+            <version>3.5.7</version>
         </dependency>
 
         <dependency>
